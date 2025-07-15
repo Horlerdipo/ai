@@ -41,7 +41,7 @@ final readonly class PlatformFactory
 
         return new Platform(
             [$GPTModelClient, $embeddingsModelClient, $whisperModelClient],
-            [new GPT\ResultConverter(), new Embeddings\ResultConverter(), new Whisper\ResultConverter()],
+            [new GPT\ResultConverter(), new Whisper\ResultConverter()],
             $contract ?? Contract::create(new AudioNormalizer()),
         );
     }
